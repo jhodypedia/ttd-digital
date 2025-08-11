@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Buat Deposit - Pansa Gateway</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="/">Pansa Gateway</a>
+      <div>
+        <button id="btnLogout" class="btn btn-danger btn-sm">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5" id="depositPage">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card p-4">
+          <h5>Buat Deposit</h5>
+          <form id="createQRISForm">
+            <div class="mb-3">
+              <label class="form-label">Nominal (Rp)</label>
+              <input id="amount" type="number" class="form-control" required>
+            </div>
+            <button class="btn btn-primary w-100">Generate QRIS</button>
+          </form>
+
+          <div id="qrisResult" style="display:none;" class="mt-4 text-center">
+            <h6>Scan QR untuk bayar</h6>
+            <img id="qrisImage" src="" alt="QRIS" class="img-fluid mb-2" style="max-width:280px">
+            <p><strong>Nominal:</strong> <span id="qrisAmount"></span></p>
+            <p><strong>Deposit ID:</strong> <span id="qrisDepositId"></span></p>
+            <p><strong>Waktu:</strong> <span id="qrisDatetime"></span></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script src="/assets/js/config.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="/assets/js/deposit.js"></script>
+  <script src="/assets/js/auth.js"></script>
+</body>
+</html>
