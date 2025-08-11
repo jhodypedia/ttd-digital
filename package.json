@@ -1,0 +1,14 @@
+{
+  "name": "qris-vercel-proxy",
+  "version": "1.0.0",
+  "description": "Proxy HTTPS ke backend QRIS Listener HTTP via Vercel",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "node api/qris.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
