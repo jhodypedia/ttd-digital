@@ -1,5 +1,5 @@
 /* main.js - frontend single script for auth, deposit, history, profile, polling */
-const API_BASE = "https://api.domain-vps.com"; // <-- GANTI ke backend VPS kamu (no trailing slash)
+const API_BASE = "/api"; // <-- GANTI ke backend VPS kamu (no trailing slash)
 
 $(function(){
   // handy
